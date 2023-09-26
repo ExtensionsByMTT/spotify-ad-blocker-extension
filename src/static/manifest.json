@@ -1,22 +1,32 @@
 {
-  "name": "SpotifyAdBlocker",
-  "description": "SpotifyAdBlocker",
+  "name": "Spotify adblocker",
+  "description": "Listen to your favorite music without any ads with spotify adblocker",
   "version": "1.0.0",
   "manifest_version": 3,
   "icons": {
-    "16": "TrueAdBlocker16x16.png",
-    "48": "TrueAdBlocker48x48.png",
-    "128": "TrueAdBlocker128x128.png"
+    "16": "spotify16x16.png",
+    "48": "spotify48x48.png",
+    "128": "spotify128x128.png"
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "TrueAdBlocker",
-    "default_icon": "TrueAdBlocker16x16.png"
+    "default_title": "spotify adblocker",
+    "default_icon": "spotify16x16.png"
   },
   "options_page": "options.html",
   "background": {
     "service_worker": "background.js"
   },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "permissions": ["declarativeNetRequest"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
