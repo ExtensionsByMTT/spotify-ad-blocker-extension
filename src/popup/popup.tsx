@@ -24,7 +24,7 @@ const App: React.FC<{}> = () => {
           </div>
         </div>
         <div className="desc">
-          <div className="text" data-text="Listening ads free music.."></div>
+          <div className="text" data-text="Keep listening ads free music.."></div>
           <h1>Spotify Ad Blocker</h1>
           <p>
             Listen to your favorite music without any ads with spotify adblocker 
